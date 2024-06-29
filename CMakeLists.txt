@@ -9,11 +9,11 @@ project(${PROJECT_NAME})
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc)
 
-# Headers
+# Sorces
 set(MCXRD_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
 
-# Sources
+# Headers
 set(MCXRD_HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/inc/parser/IParseFile.h)
 
