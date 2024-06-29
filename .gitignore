@@ -1,3 +1,5 @@
 .vscode
 .keep
 build/
+theory/*.log
+theory/*.aux
