@@ -7,14 +7,9 @@ set(PROJECT_NAME MCXRD)
 
 project(${PROJECT_NAME})
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc)
-
-# Sorces
-set(MCXRD_SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
-
-# Headers
-set(MCXRD_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc/parser/IParseFile.h)
+file(GLOB_RECURSE MCXRD_SOURCES src/*.cpp)
+file(GLOB_RECURSE MCXRD_HEADERS inc/*.h)
 
 add_executable(${PROJECT_NAME} ${MCXRD_SOURCES} ${MCXRD_HEADERS})
+target_compile_options(${PROJECT_NAME} PUBLIC -Wall -Wextra -g)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)
